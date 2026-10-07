@@ -1,0 +1,8 @@
+node_modules
+cert.pem
+key.pem
+.env
+data
+dist
+*.save
+.node_modules-root-owned-backup-*

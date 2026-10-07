@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS mapa_pontos_fixos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(140) NOT NULL,
+    tipo VARCHAR(40) NOT NULL,
+    icone VARCHAR(16) NULL,
+    cor VARCHAR(24) NULL,
+    latitude DECIMAL(10,7) NOT NULL,
+    longitude DECIMAL(10,7) NOT NULL,
+    texto TEXT NULL,
+    tecnico_id VARCHAR(80) NULL,
+    visibilidade VARCHAR(32) NOT NULL DEFAULT 'coordenador',
+    mostrar_label_no_mapa TINYINT(1) NOT NULL DEFAULT 0,
+    ativo TINYINT(1) NOT NULL DEFAULT 1,
+    criado_por VARCHAR(120) NULL,
+    atualizado_por VARCHAR(120) NULL,
+    removido_por VARCHAR(120) NULL,
+    removido_em DATETIME NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_mapa_pontos_fixos_ativo_tipo (ativo, tipo),
+    INDEX idx_mapa_pontos_fixos_visibilidade (visibilidade),
+    INDEX idx_mapa_pontos_fixos_tecnico (tecnico_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

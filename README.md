@@ -26,6 +26,10 @@ Painel operacional (NOC) para gestão da agenda dos técnicos de campo da **Aces
 ### Chat interno
 - Lista de usuários e comunicação interna da equipe do NOC
 
+## Em desenvolvimento
+
+- **Mover técnico pelo mouse (drag and drop):** a interação de arrastar e soltar já está implementada no frontend, mas ainda está aguardando a API de `POST` correspondente no backend para persistir a movimentação. Até essa API ser implementada, a movimentação não é salva de fato.
+
 ## Tecnologias
 
 - **Frontend:** HTML, CSS e JavaScript
